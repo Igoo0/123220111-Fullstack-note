@@ -1,0 +1,28 @@
+GET http://localhost:3000/notes
+
+
+###
+GET http://localhost:3000/notes/1
+
+###
+POST http://localhost:3000/notes
+Content-Type: application/json
+
+{
+    "judul": "Note 2",
+    "konten": "Ini adalah note 2",
+    "tgl": "2025-03-01"
+}
+
+###
+PATCH http://localhost:3000/notes/1
+Content-Type: application/json
+
+{
+    "judul": "Note 1",
+    "konten": "aku sangat bahagia",
+    "tgl": "2025-03-01"
+}
+
+###
+DELETE http://localhost:3000/notes/2
