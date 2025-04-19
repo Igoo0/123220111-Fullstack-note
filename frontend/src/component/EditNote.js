@@ -11,7 +11,7 @@ function EditNote() {
 
     const getNoteById = useCallback(async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/notes/${id}`);
+            const response = await axios.get(`https://backend-751413038158.us-central1.run.app/notes/${id}`);
             setTgl(response.data.tgl);
             setJudul(response.data.judul);
             setKonten(response.data.konten);
@@ -27,7 +27,7 @@ function EditNote() {
     const updateNote = async (e) => {
         e.preventDefault();
         try {
-            await axios.patch(`http://localhost:3000/notes/${id}`, {
+            await axios.patch(`https://backend-751413038158.us-central1.run.app/notes/${id}`, {
                 tgl,
                 judul,
                 konten
