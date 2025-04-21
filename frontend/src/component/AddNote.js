@@ -12,7 +12,7 @@ function AddNote() {
     const saveNote = async (e) =>{
         e.preventDefault();
         try {
-            await axios.post('https://backend-751413038158.us-central1.run.app/notes',{
+            await axios.post('https://notes-be111-751413038158.us-central1.run.app/notes',{
                 tgl,
                 judul,
                 konten
