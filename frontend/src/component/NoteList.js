@@ -15,7 +15,7 @@ const getNotes = async () =>{
 
 const deleteNote = async (id) =>{
     try {
-        await axios.delete(`https://notes-be111-751413038158.us-central1.run.app/${id}`);
+        await axios.delete(`https://notes-be111-751413038158.us-central1.run.app/notes/${id}`);
         getNotes();
     } catch (error) {
         console.log(error);
