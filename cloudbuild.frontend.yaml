@@ -1,16 +1,9 @@
 steps:
   # Step 1: Install dependencies
-  - name: "gcr.io/cloud-builders/npm"
+  - name: "gcr.io/cloud-builders/gcloud"
     entrypoint: bash
     args:
-      - -c
-      - |
-        if [ ! -d "node_modules" ]; then
-          echo "Installing dependencies..."
-          npm ci
-        else
-          echo "Skipping npm install, node_modules exists."
-        fi
+      ["-c", "cp -r frontend/build build"]
     dir: "frontend"
     volumes:
       - name: "npm-cache"
