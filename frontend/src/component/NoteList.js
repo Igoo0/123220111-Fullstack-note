@@ -9,13 +9,13 @@ useEffect(()=>{
 },[]);
 
 const getNotes = async () =>{
-    const response = await axios.get('https://backend-751413038158.us-central1.run.app/notes');
+    const response = await axios.get('https://notes-be111-751413038158.us-central1.run.app/notes');
     setNote(response.data);
 };
 
 const deleteNote = async (id) =>{
     try {
-        await axios.delete(`https://backend-751413038158.us-central1.run.app/notes/${id}`);
+        await axios.delete(`https://notes-be111-751413038158.us-central1.run.app/${id}`);
         getNotes();
     } catch (error) {
         console.log(error);
